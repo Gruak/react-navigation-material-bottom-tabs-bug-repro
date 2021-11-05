@@ -70,7 +70,7 @@ const TabTwoStack = createNativeStackNavigator();
 function TabTwoNavigator() {
   return (
     <TabTwoStack.Navigator>
-      <TabOneStack.Screen
+      <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
         options={{ headerShown: false }}
