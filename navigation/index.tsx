@@ -6,7 +6,7 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
 
@@ -33,7 +33,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  * A root stack navigator is often used for displaying modals on top of all other content.
  * https://reactnavigation.org/docs/modal
  */
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
@@ -51,7 +51,7 @@ function RootNavigator() {
  * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
-const TabOneStack = createNativeStackNavigator();
+const TabOneStack = createStackNavigator();
 
 function TabOneNavigator() {
   return (
@@ -65,7 +65,7 @@ function TabOneNavigator() {
   );
 }
 
-const TabTwoStack = createNativeStackNavigator();
+const TabTwoStack = createStackNavigator();
 
 function TabTwoNavigator() {
   return (
